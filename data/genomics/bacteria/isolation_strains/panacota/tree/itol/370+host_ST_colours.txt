@@ -1,0 +1,526 @@
+DATASET_COLORSTRIP
+#In colored strip datasets, each ID is associated to a color box/strip and can have an optional label. Color can be specified in hexadecimal, RGB or RGBA notation. When using RGB or RGBA notation, you cannot use COMMA as the dataset separator
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file.
+
+SEPARATOR TAB
+#SEPARATOR COMMA
+#SEPARATOR SPACE
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL	label1
+
+#dataset color (can be changed later)
+COLOR	#ff0000
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#If COLOR_BRANCHES is set to 1, branches of the tree will be colored according to the colors of the strips above the leaves.
+#When all children of a node have the same color, it will be colored the same, ie. the color will propagate inwards towards the root.
+COLOR_BRANCHES	0
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#Each dataset can have a legend, which is defined using LEGEND_XXX fields below
+#For each row in the legend, there should be one shape, color and label.
+#Optionally, you can define an exact legend position using LEGEND_POSITION_X and LEGEND_POSITION_Y. To use automatic legend positioning, do NOT define these values
+#Optionally, shape scaling can be present (LEGEND_SHAPE_SCALES). For each shape, you can define a scaling factor between 0 and 1.
+#To order legend entries horizontally instead of vertically, set LEGEND_HORIZONTAL to 1
+#Shape should be a number between 1 and 6, or any protein domain shape definition.
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+#LEGEND_TITLE Dataset_legend
+#LEGEND_POSITION_X 100
+#LEGEND_POSITION_Y 100
+#LEGEND_HORIZONTAL 0
+#LEGEND_SHAPES 1 1 2 2
+#LEGEND_COLORS #ff0000 #00ff00 rgba(0,255,0,0.5) #0000ff
+#LEGEND_LABELS value1 value2 value3 value4
+#LEGEND_SHAPE_SCALES 1 1 0.5 1
+
+#width of the colored strip
+#STRIP_WIDTH 25
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+#MARGIN 0
+
+#border width; if set above 0, a border of specified width (in pixels) will be drawn around the color strip 
+#BORDER_WIDTH 0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR #0000ff
+
+#if set to 1, border will be drawn completely around each colored strip box
+#COMPLETE_BORDER 0
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL 0
+
+
+#display or hide the individual label inside each colored strip (when defined in the data below)
+#SHOW_STRIP_LABELS 1
+
+#position of the strip label within the box; 'top', 'center' or 'bottom'
+#STRIP_LABEL_POSITION center
+
+#strip label size factor (relative to the tree leaf labels)
+#STRIP_LABEL_SIZE_FACTOR 1
+
+
+#rotation of the strip labels; used only in rectangular tree display mode
+#STRIP_LABEL_ROTATION 0
+
+#strip label shift in pixels (positive or negative)
+#STRIP_LABEL_SHIFT 0
+
+#STRIP_LABEL_COLOR #000000
+
+#draw a black outline around the text (width in pixels)
+#STRIP_LABEL_OUTLINE 0.5
+
+#display or hide the dataset label above the colored strip
+#SHOW_LABELS 1
+
+#dataset label size factor
+#SIZE_FACTOR 1
+
+#dataset label rotation
+#LABEL_ROTATION 0
+
+#dataset label shift in pixels (positive or negative)
+#LABEL_SHIFT 0
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+
+#Examples:
+#assign a red colored strip to leaf 9606, with label 'Human'
+#9606 #ff0000 Human
+
+#assign a green, semi-transparent (alpha 0.5) strip to an internal node, without any label. If 'Show internal values' is set to 'No', this will only be displayed if the node is collapsed. 
+#9606|5664 rgba(0,255,0,0.5)
+
+
+001-023	#f88645	1163
+001-031-c1	#91718a	452
+003-026	#f88645	1163
+013-008	#91718a	452
+025-010	#c78500	543
+034-008	#91718a	452
+034-026-c1	#91718a	452
+035-004	#91718a	452
+370D	#de7200	7056
+381A	#91718a	452
+916A	#904466	174
+921A	#904466	174
+AN03	#ba6c30	117
+Asp51g	#d971a5	3616
+ATCC35469T	#e4a19e	5298
+B090	#e33f87	7532
+B1147	#e259ba	5615
+B12I13	#ba8c7f	770
+B156	#78734c	new
+B1747	#ba8c7f	770
+B1932	#ba6c30	117
+B253	#984807	4419
+B49	#bba47c	5358
+B691	#f13401	7966
+B6A1	#c2b212	1508
+B992	#ff7400	10001
+Ben4d	#91718a	452
+C2-119	#ba8c7f	770
+colF12g	#91718a	452
+DEC1a	#8a6057	19
+DEC2a	#8a6057	19
+E_albertiiCIP107988T	#fcb7d6	383
+E_fergusonii-IVAN	#645f30	5636
+E1426	#a02443	2712
+E1492	#eea94c	3720
+E2052	#e4c000	747
+E2348_69	#c45d9b	15
+E4962	#d273c9	6492
+E7519	#f9f2c1	2562
+EC6230	#9b6c74	2569
+ECOR-01	#d70000	10
+ECOR-02	#a65c50	49
+ECOR-03	#d70000	10
+ECOR-04	#9c5732	63
+ECOR-05	#d70000	10
+ECOR-06	#8b8340	77
+ECOR-07	#694600	345
+ECOR-08	#d70000	10
+ECOR-09	#d70000	10
+ECOR-10	#bf0340	43
+ECOR-11	#d70000	10
+ECOR-12	#d70000	10
+ECOR-13	#ed3450	44
+ECOR-14	#d70000	10
+ECOR-15	#d6ca59	45
+ECOR-16	#9e9863	46
+ECOR-17	#f996a2	47
+ECOR-18	#64465e	48
+ECOR-19	#64465e	48
+ECOR-20	#64465e	48
+ECOR-21	#64465e	48
+ECOR-22	#785b1b	50
+ECOR-23	#bf00a0	1112
+ECOR-24	#7d702b	52
+ECOR-25	#d70000	10
+ECOR-26	#ae4004	53
+ECOR-27	#ae4004	53
+ECOR-28	#a20024	54
+ECOR-29	#e4bfdb	55
+ECOR-30	#ffccba	56
+ECOR-31	#a55a00	57
+ECOR-32	#ffccba	56
+ECOR-33	#ffccba	56
+ECOR-34	#ac9d00	58
+ECOR-35	#ff5a00	59
+ECOR-36	#ff5a00	59
+ECOR-37	#b23763	61
+ECOR-38	#ff9b00	62
+ECOR-39	#ff9b00	62
+ECOR-40	#ff9b00	62
+ECOR-41	#ff9b00	62
+ECOR-42	#881528	64
+ECOR-43_A	#bf0340	43
+ECOR-44	#d59d5e	130
+ECOR-45	#ff0031	67
+ECOR-46	#e90061	68
+ECOR-47	#ff9a89	69
+ECOR-48	#9b007d	70
+ECOR-49	#e1b0be	405
+ECOR-50	#ff2fda	72
+ECOR-51	#514900	73
+ECOR-52	#514900	73
+ECOR-53	#c6bf92	12
+ECOR-54	#514900	73
+ECOR-55	#ead1a5	74
+ECOR-56	#514900	73
+ECOR-57	#514900	73
+ECOR-58	#832e46	75
+ECOR-59	#c6bf92	12
+ECOR-60	#c6bf92	12
+ECOR-61	#864f01	79
+ECOR-62	#864f01	79
+ECOR-63	#bd583a	80
+ECOR-64	#ff4d6b	14
+ECOR-65	#c1b656	681
+ECOR-66	#f4df00	83
+ECOR-67	#af73a7	84
+ECOR-69	#b58849	86
+ECOR-70	#ff62f8	88
+ECOR-71	#c1507b	360
+ECOR-72	#ff604c	89
+ED1a	#91718a	452
+EDL933	#e4db8a	11
+FN116	#ff7e9d	589
+FN126	#ce4160	35
+FN89	#db8a90	582
+FN-B4	#942d1b	1907
+FN-B7	#c45d9b	15
+FN-B9	#ff7e9d	589
+H009	#dbb76f	2711
+H1-001-0003-S-J	#823a32	23
+H1-001-0013-L-J	#ff62f8	88
+H1-001-0020-M-O	#ff62f8	88
+H1-001-0027-S-G	#ac9d00	58
+H1-001-0034-S-M	#ba6c30	117
+H1-001-0053-K-C	#ba6c30	117
+H1-001-0093-R-A	#ffc2f4	155
+H1-001-0121-Q-J	#823a32	23
+H1-001-0125-B-M	#ac9d00	58
+H1-001-0131-C-A	#ff62f8	88
+H1-001-0154-T-K	#ff46af	410
+H1-001-0155-M-I	#ba6c30	117
+H1-002-0007-M-M	#823a32	23
+H1-002-0011-M-G	#823a32	23
+H1-002-0060-C-T	#ff62f8	88
+H1-002-0064-E-M	#ac9d00	58
+H1-002-0069-V-G	#b8131b	738
+H1-003-0010-G-J	#ac9d00	58
+H1-003-0019-B-M	#93004d	3042
+H1-003-0035-D-E	#b77789	1092
+H1-003-0054-P-P	#ba6c30	117
+H1-003-0071-C-J	#ff62f8	88
+H1-003-0079-G-R	#ff62f8	88
+H1-003-0088-B-J	#ff62f8	88
+H1-003-0090-V-J	#ff62f8	88
+H1-003-0105-C-R	#ff62f8	88
+H1-003-0115-L-R	#ff62f8	88
+H1-003-0116-V-R	#d28251	8105
+H1-003-0120-P-R	#be50b8	8106
+H1-004-0007-O-M	#ba8c7f	770
+H1-004-0017-B-M	#ac9d00	58
+H1-004-0021-W-I	#823a32	23
+H1-005-0012-L-M	#724a4c	8117
+H1-005-0058-M-A	#ac9d00	58
+H1-006-0003-S-L	#ea06ab	783
+H1-006-0022-L-R	#ff46af	410
+H1-007-0015-D-G	#823a32	23
+H1-007-0037-H-D	#ff62f8	88
+H14	#ac9d00	58
+H384	#a93b38	662
+H4	#ffc2f4	155
+H442	#e4c000	747
+H47	#ffc2f4	155
+H48	#ffc2f4	155
+H70	#ffc2f4	155
+H95	#964d51	7961
+IAI01	#cd747a	1128
+IAI02	#674f31	154
+IAI03	#a0409b	1434
+IAI04	#d70000	10
+IAI05	#ff7c77	3051
+IAI06	#d70000	10
+IAI07	#df00cf	1137
+IAI08	#af016d	3593
+IAI09	#d70000	10
+IAI10	#942965	548
+IAI11	#d70000	10
+IAI12	#d70000	10
+IAI13	#d70000	10
+IAI14	#d70000	10
+IAI15	#977500	34
+IAI16	#a0409b	1434
+IAI17	#977500	34
+IAI18	#ff62f8	88
+IAI19	#d70000	10
+IAI20	#d70000	10
+IAI21	#875867	210
+IAI22	#d70000	10
+IAI23	#a0409b	1434
+IAI24	#d59d5e	130
+IAI25	#d70000	10
+IAI26	#d70000	10
+IAI27	#6e6301	106
+IAI28	#d70000	10
+IAI29	#d70000	10
+IAI30	#6e6301	106
+IAI31	#d70000	10
+IAI32	#93004d	3042
+IAI33	#ae8ca6	624
+IAI34	#d70000	10
+IAI35	#ff5a00	59
+IAI36	#ff9b00	62
+IAI37	#d70000	10
+IAI38	#864f01	79
+IAI39	#ff9b00	62
+IAI40	#d70000	10
+IAI41	#e46a36	2230
+IAI42	#823a32	23
+IAI43	#ff62f8	88
+IAI44	#d70000	10
+IAI45	#93004d	3042
+IAI46	#740071	95
+IAI47	#968901	1861
+IAI48	#91718a	452
+IAI49	#db6584	706
+IAI50	#9e7857	1265
+IAI51	#d58bb3	141
+IAI53	#de8dd3	363
+IAI54	#514900	73
+IAI55	#b65863	372
+IAI56	#740071	95
+IAI57	#fff170	127
+IAI58	#ff5a00	59
+IAI59	#864f01	79
+IAI60	#740071	95
+IAI61	#740071	95
+IAI62	#fff170	127
+IAI63	#fff170	127
+IAI64	#b65863	372
+IAI65	#740071	95
+IAI66	#740071	95
+IAI67	#ff4d6b	14
+IAI68	#514900	73
+IAI69	#740071	95
+IAI70	#b65863	372
+IAI71	#c6bf92	12
+IAI72	#514900	73
+IAI73	#fff170	127
+IAI74	#d58bb3	141
+IAI75	#fff170	127
+IAI76	#fff170	127
+IAI77	#c6bf92	12
+IAI78	#ff4d6b	14
+IAI79	#ff4d6b	14
+IAI80	#ff4d6b	14
+IAI81	#ff4d6b	14
+IAI82	#fff170	127
+LMR-3158	#97442d	3777
+M863	#c899a7	2715
+NILS01	#ff9a89	69
+NILS02	#7c4624	224
+NILS03	#7c6142	216
+NILS04	#9e9863	46
+NILS05	#c78500	543
+NILS06	#d70000	10
+NILS07	#d70000	10
+NILS08	#d70000	10
+NILS09	#d70000	10
+NILS10	#df00cf	1137
+NILS11	#d70000	10
+NILS12	#fff19c	450
+NILS13	#df00cf	1137
+NILS14	#d70000	10
+NILS15	#ff62f8	88
+NILS16	#b17102	167
+NILS17	#dc957b	2739
+NILS18	#ff9a89	69
+NILS19	#d00081	131
+NILS20	#91718a	452
+NILS21	#740071	95
+NILS22	#d70000	10
+NILS23	#f677c1	973
+NILS24	#ac9d00	58
+NILS25	#d00081	131
+NILS26	#ffc671	569
+NILS27	#d00081	131
+NILS28	#e25c64	1193
+NILS29	#fff170	127
+NILS30	#881c84	3877
+NILS31	#f9f2c1	2562
+NILS32	#d70000	10
+NILS33	#674f31	154
+NILS34	#823a32	23
+NILS35	#90497f	4238
+NILS36	#dd0337	7339
+NILS37	#a0409b	1434
+NILS38	#cb1661	501
+NILS39	#ff9a89	69
+NILS40	#823a32	23
+NILS41	#dd7261	93
+NILS42	#c4313a	38
+NILS43	#a98d6a	540
+NILS44	#d00081	131
+NILS45	#f8d355	3018
+NILS46	#ff9a89	69
+NILS47	#ff62f8	88
+NILS48	#823a32	23
+NILS49	#ac9d00	58
+NILS50	#ff9a89	69
+NILS51	#e24edc	132
+NILS52	#b67062	963
+NILS53	#d00081	131
+NILS54	#d35300	6458
+NILS55	#d00081	131
+NILS56	#e1b0be	405
+NILS57	#740071	95
+NILS58	#873500	6530
+NILS59	#514900	73
+NILS60	#ba6c30	117
+NILS61	#d58bb3	141
+NILS62	#d58bb3	141
+NILS63	#dea6d4	91
+NILS64	#d00081	131
+NILS65	#fff170	127
+NILS66	#a200a1	140
+NILS67	#740071	95
+NILS68	#740071	95
+NILS69	#fcc091	1170
+NILS70	#c6bf92	12
+NILS71	#ca3d18	1154
+NILS72	#fff170	127
+NILS73	#d00081	131
+NILS74	#514900	73
+NILS75	#c6bf92	12
+NILS76	#d00081	131
+NILS77	#ffb82c	7344
+NILS78	#740071	95
+NILS79	#fff170	127
+NILS80	#ffc671	569
+NILS81	#b65863	372
+NILS82	#740071	95
+ROAR012	#8f682d	10233
+ROAR019	#aa8726	5362
+ROAR029	#7a2259	9312
+ROAR036	#78734c	new
+ROAR043	#c120bf	4104
+ROAR047	#ffc2f4	155
+ROAR059	#b2aa69	3774
+ROAR061	#ffc2f4	155
+ROAR072	#ffc2f4	155
+ROAR082	#ffc2f4	155
+ROAR116	#78734c	new
+ROAR129	#ffa96d	7495
+ROAR130	#a92600	3747
+ROAR131	#bb9c41	350
+ROAR145	#b04286	7494
+ROAR176	#ff96e6	133
+ROAR178	#ac9d00	58
+ROAR185	#93004d	3042
+ROAR205	#ac9d00	58
+ROAR220	#ff96e6	133
+ROAR274	#78734c	new
+ROAR291	#e38d2e	2371
+ROAR292	#fd5c93	2196
+ROAR334	#ac9d00	58
+ROAR344	#ffcddd	10187
+ROAR387	#dcae96	6646
+ROAR400	#ac9d00	58
+ROAR419	#ac9d00	58
+ROAR434	#7c3a76	657
+ROAR438	#cc3da5	5547
+S1-109	#ff2c7c	5397
+S1-11	#ff9fc3	713
+S1-76	#ffb3b0	28
+S1-84	#78734c	new
+S1-91	#78734c	new
+S2-1	#a35e7f	941
+TW10509	#e4c000	747
+VDG427	#91718a	452
+MT1B1	#80577a	998
+AN17	#514900	73
+LF82	#9a0000	135
+LF73	#9a0000	135
+LF7074	#740071	95
+NRG807C	#9a0000	135
+LF31	#514900	73
+LM33	#d00081	131
+T145	#d58bb3	141
+BDX09	#ba6c30	117
+536	#fff170	127
+T205	#9d5d96	2015
+T147	#514900	73
+LF50	#753b59	1511
+DIJ07	#ff9a89	69
+LI10	#d00081	131
+LM02	#ff9a89	69
+LM40	#ff9a89	69
+BDX03	#ff9a89	69
+PDP351	#ff46af	410
+BE	#d70000	10
+PDP110	#ff62f8	88
+LM07	#ac9d00	58
+AL505	#740071	95
+AN24	#d70000	10
+BL21	#dd7261	93
+PDP21	#ff9a89	69
+BCH953	#ac9d00	58
+55989	#d74742	678
+NAN33	#d70000	10
+DIJ06	#514900	73
+NIC06	#d70000	10
+LM08	#ff9a89	69
+LF110	#d8a20a	NA

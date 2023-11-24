@@ -1,0 +1,464 @@
+TREE_COLORS
+#use this template to define branch colors and styles, colored ranges and label colors/font styles/backgrounds
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA)_This separator must be used throughout this file_
+
+#SEPARATOR TAB
+SEPARATOR TAB
+#SEPARATOR COMMA
+
+#First 3 fields define the node, type and color
+#Possible types are:
+#'range': defines a colored range (colored background for labels/clade)
+#'clade': defines color/style for all branches in a clade
+#'branch': defines color/style for a single branch
+#'label': defines font color/style for the leaf label
+#'label_background': defines the leaf label background color
+
+#The following additional fields are required:
+#for 'range', field 4 defines the colored range label (used in the legend)
+
+#The following additional fields are optional:
+#for 'label', field 4 defines the font style ('normal',''bold', 'italic' or 'bold-italic') and field 5 defines the numeric scale factor for the font size (eg_ with value 2, font size for that label will be 2x the standard size)
+#for 'clade' and 'branch', field 4 defines the branch style ('normal' or 'dashed') and field 5 defines the branch width scale factor (eg_ with value 0_5, branch width for that clade will be 0_5 the standard width)
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+#NODE_ID TYPE COLOR LABEL_OR_STYLE SIZE_FACTOR
+
+#Examples
+#internal node with solid branches colored blue and twice the standard width
+#9031|9606 clade #0000ff normal 2
+#internal node with dashed branches colored red and one half the standard width
+#601|340 clade #ff0000 dashed 0.5
+#a single internal branch colored green, dashed and 5 times the normal width
+#915|777 branch #00ff00 dashed 5
+
+#colored range covering all leaves of an internal node,  colored red and with label 'Eukaryota'
+#184922|9606 range #ff0000 Eukaryota
+#examples of colored ranges from iTOL's Tree of Life
+#2190|2287 range #aaffaa Archaea
+#623|1502 range #aaaaff Bacteria
+
+#leaf label for node 9606 will be displayed in green, bold and twice the regular font size
+#9606 label #00ff00 bold 2
+
+#leaf label for node 9031 will be displayed in yellow, bold italic and half the regular font size
+#9031 label #ffff00 bold-italic 0.5
+
+#leaf label for node 8015 will be displayed in blue
+#8015 label #0000ff
+
+#leaf label for node 9606 will have a semi-transparent red background
+#9606 label_background rgba(255,0,0,0.5)
+ESCO.0722.00001	range	#aaaaaa	Original
+ESCO.0722.00002	range	#aaaaaa	Original
+ESCO.0722.00003	range	#aaaaaa	Original
+ESCO.0722.00004	range	#aaaaaa	Original
+ESCO.0722.00005	range	#aaaaaa	Original
+ESCO.0722.00006	range	#aaaaaa	Original
+ESCO.0722.00007	range	#aaaaaa	Original
+ESCO.0722.00008	range	#aaaaaa	Original
+ESCO.0722.00009	range	#aaaaaa	Original
+ESCO.0722.00010	range	#aaaaaa	Original
+ESCO.0722.00011	range	#aaaaaa	Original
+ESCO.0722.00012	range	#aaaaaa	Original
+ESCO.0722.00013	range	#aaaaaa	Original
+ESCO.0722.00014	range	#aaaaaa	Original
+ESCO.0722.00015	range	#aaaaaa	Original
+ESCO.0722.00016	range	#aaaaaa	Original
+ESCO.0722.00017	range	#aaaaaa	Original
+ESCO.0722.00018	range	#aaaaaa	Original
+ESCO.0722.00019	range	#aaaaaa	Original
+ESCO.0722.00020	range	#aaaaaa	Original
+ESCO.0722.00021	range	#aaaaaa	Original
+ESCO.0722.00022	range	#aaaaaa	Original
+ESCO.0722.00023	range	#aaaaaa	Original
+ESCO.0722.00024	range	#aaaaaa	Original
+ESCO.0722.00025	range	#aaaaaa	Original
+ESCO.0722.00026	range	#aaaaaa	Original
+ESCO.0722.00027	range	#aaaaaa	Original
+ESCO.0722.00028	range	#aaaaaa	Original
+ESCO.0722.00029	range	#aaaaaa	Original
+ESCO.0722.00030	range	#aaaaaa	Original
+ESCO.0722.00031	range	#aaaaaa	Original
+ESCO.0722.00032	range	#aaaaaa	Original
+ESCO.0722.00033	range	#aaaaaa	Original
+ESCO.0722.00034	range	#aaaaaa	Original
+ESCO.0722.00035	range	#dddddd	
+ESCO.0722.00036	range	#aaaaaa	Original
+ESCO.0722.00037	range	#aaaaaa	Original
+ESCO.0722.00038	range	#aaaaaa	Original
+ESCO.0722.00039	range	#aaaaaa	Original
+ESCO.0722.00040	range	#aaaaaa	Original
+ESCO.0722.00041	range	#aaaaaa	Original
+ESCO.0722.00042	range	#aaaaaa	Original
+ESCO.0722.00043	range	#dddddd	
+ESCO.0722.00044	range	#aaaaaa	Original
+ESCO.0722.00045	range	#aaaaaa	Original
+ESCO.0722.00046	range	#aaaaaa	Original
+ESCO.0722.00047	range	#aaaaaa	Original
+ESCO.0722.00048	range	#aaaaaa	Original
+ESCO.0722.00049	range	#aaaaaa	Original
+ESCO.0722.00050	range	#aaaaaa	Original
+ESCO.0722.00051	range	#aaaaaa	Original
+ESCO.0722.00052	range	#aaaaaa	Original
+ESCO.0722.00053	range	#dddddd	
+ESCO.0722.00054	range	#aaaaaa	Original
+ESCO.0722.00055	range	#aaaaaa	Original
+ESCO.0722.00056	range	#aaaaaa	Original
+ESCO.0722.00057	range	#aaaaaa	Original
+ESCO.0722.00058	range	#aaaaaa	Original
+ESCO.0722.00059	range	#aaaaaa	Original
+ESCO.0722.00060	range	#aaaaaa	Original
+ESCO.0722.00061	range	#aaaaaa	Original
+ESCO.0722.00062	range	#aaaaaa	Original
+ESCO.0722.00063	range	#aaaaaa	Original
+ESCO.0722.00064	range	#aaaaaa	Original
+ESCO.0722.00065	range	#aaaaaa	Original
+ESCO.0722.00066	range	#aaaaaa	Original
+ESCO.0722.00067	range	#aaaaaa	Original
+ESCO.0722.00068	range	#aaaaaa	Original
+ESCO.0722.00069	range	#aaaaaa	Original
+ESCO.0722.00070	range	#aaaaaa	Original
+ESCO.0722.00071	range	#aaaaaa	Original
+ESCO.0722.00072	range	#aaaaaa	Original
+ESCO.0722.00073	range	#aaaaaa	Original
+ESCO.0722.00074	range	#aaaaaa	Original
+ESCO.0722.00075	range	#aaaaaa	Original
+ESCO.0722.00076	range	#aaaaaa	Original
+ESCO.0722.00077	range	#aaaaaa	Original
+ESCO.0722.00078	range	#aaaaaa	Original
+ESCO.0722.00079	range	#aaaaaa	Original
+ESCO.0722.00080	range	#aaaaaa	Original
+ESCO.0722.00081	range	#aaaaaa	Original
+ESCO.0722.00082	range	#aaaaaa	Original
+ESCO.0722.00083	range	#aaaaaa	Original
+ESCO.0722.00084	range	#aaaaaa	Original
+ESCO.0722.00085	range	#dddddd	
+ESCO.0722.00086	range	#aaaaaa	Original
+ESCO.0722.00087	range	#aaaaaa	Original
+ESCO.0722.00088	range	#aaaaaa	Original
+ESCO.0722.00089	range	#aaaaaa	Original
+ESCO.0722.00090	range	#aaaaaa	Original
+ESCO.0722.00091	range	#aaaaaa	Original
+ESCO.0722.00092	range	#aaaaaa	Original
+ESCO.0722.00093	range	#aaaaaa	Original
+ESCO.0722.00094	range	#aaaaaa	Original
+ESCO.0722.00095	range	#aaaaaa	Original
+ESCO.0722.00096	range	#aaaaaa	Original
+ESCO.0722.00097	range	#aaaaaa	Original
+ESCO.0722.00098	range	#aaaaaa	Original
+ESCO.0722.00099	range	#aaaaaa	Original
+ESCO.0722.00100	range	#aaaaaa	Original
+ESCO.0722.00101	range	#aaaaaa	Original
+ESCO.0722.00102	range	#aaaaaa	Original
+ESCO.0722.00103	range	#aaaaaa	Original
+ESCO.0722.00104	range	#aaaaaa	Original
+ESCO.0722.00105	range	#aaaaaa	Original
+ESCO.0722.00106	range	#aaaaaa	Original
+ESCO.0722.00107	range	#aaaaaa	Original
+ESCO.0722.00108	range	#aaaaaa	Original
+ESCO.0722.00109	range	#aaaaaa	Original
+ESCO.0722.00110	range	#aaaaaa	Original
+ESCO.0722.00111	range	#aaaaaa	Original
+ESCO.0722.00112	range	#aaaaaa	Original
+ESCO.0722.00113	range	#aaaaaa	Original
+ESCO.0722.00114	range	#aaaaaa	Original
+ESCO.0722.00115	range	#aaaaaa	Original
+ESCO.0722.00116	range	#aaaaaa	Original
+ESCO.0722.00117	range	#aaaaaa	Original
+ESCO.0722.00118	range	#aaaaaa	Original
+ESCO.0722.00119	range	#aaaaaa	Original
+ESCO.0722.00120	range	#aaaaaa	Original
+ESCO.0722.00121	range	#aaaaaa	Original
+ESCO.0722.00122	range	#aaaaaa	Original
+ESCO.0722.00123	range	#aaaaaa	Original
+ESCO.0722.00124	range	#aaaaaa	Original
+ESCO.0722.00125	range	#aaaaaa	Original
+ESCO.0722.00126	range	#aaaaaa	Original
+ESCO.0722.00127	range	#aaaaaa	Original
+ESCO.0722.00128	range	#aaaaaa	Original
+ESCO.0722.00129	range	#dddddd	
+ESCO.0722.00130	range	#aaaaaa	Original
+ESCO.0722.00131	range	#aaaaaa	Original
+ESCO.0722.00132	range	#aaaaaa	Original
+ESCO.0722.00133	range	#aaaaaa	Original
+ESCO.0722.00134	range	#aaaaaa	Original
+ESCO.0722.00135	range	#aaaaaa	Original
+ESCO.0722.00136	range	#aaaaaa	Original
+ESCO.0722.00137	range	#aaaaaa	Original
+ESCO.0722.00138	range	#aaaaaa	Original
+ESCO.0722.00139	range	#aaaaaa	Original
+ESCO.0722.00140	range	#dddddd	
+ESCO.0722.00141	range	#aaaaaa	Original
+ESCO.0722.00142	range	#dddddd	
+ESCO.0722.00143	range	#aaaaaa	Original
+ESCO.0722.00144	range	#aaaaaa	Original
+ESCO.0722.00145	range	#aaaaaa	Original
+ESCO.0722.00146	range	#aaaaaa	Original
+ESCO.0722.00147	range	#aaaaaa	Original
+ESCO.0722.00148	range	#aaaaaa	Original
+ESCO.0722.00149	range	#dddddd	
+ESCO.0722.00150	range	#aaaaaa	Original
+ESCO.0722.00151	range	#dddddd	
+ESCO.0722.00152	range	#aaaaaa	Original
+ESCO.0722.00153	range	#aaaaaa	Original
+ESCO.0722.00154	range	#aaaaaa	Original
+ESCO.0722.00155	range	#aaaaaa	Original
+ESCO.0722.00156	range	#aaaaaa	Original
+ESCO.0722.00157	range	#aaaaaa	Original
+ESCO.0722.00158	range	#aaaaaa	Original
+ESCO.0722.00159	range	#aaaaaa	Original
+ESCO.0722.00160	range	#aaaaaa	Original
+ESCO.0722.00161	range	#aaaaaa	Original
+ESCO.0722.00162	range	#aaaaaa	Original
+ESCO.0722.00163	range	#aaaaaa	Original
+ESCO.0722.00164	range	#aaaaaa	Original
+ESCO.0722.00165	range	#aaaaaa	Original
+ESCO.0722.00166	range	#dddddd	
+ESCO.0722.00167	range	#aaaaaa	Original
+ESCO.0722.00168	range	#aaaaaa	Original
+ESCO.0722.00169	range	#dddddd	
+ESCO.0722.00170	range	#dddddd	
+ESCO.0722.00171	range	#aaaaaa	Original
+ESCO.0722.00172	range	#aaaaaa	Original
+ESCO.0722.00173	range	#aaaaaa	Original
+ESCO.0722.00174	range	#aaaaaa	Original
+ESCO.0722.00175	range	#aaaaaa	Original
+ESCO.0722.00176	range	#aaaaaa	Original
+ESCO.0722.00177	range	#aaaaaa	Original
+ESCO.0722.00178	range	#aaaaaa	Original
+ESCO.0722.00179	range	#aaaaaa	Original
+ESCO.0722.00180	range	#aaaaaa	Original
+ESCO.0722.00181	range	#aaaaaa	Original
+ESCO.0722.00182	range	#aaaaaa	Original
+ESCO.0722.00183	range	#aaaaaa	Original
+ESCO.0722.00184	range	#aaaaaa	Original
+ESCO.0722.00185	range	#aaaaaa	Original
+ESCO.0722.00186	range	#aaaaaa	Original
+ESCO.0722.00187	range	#aaaaaa	Original
+ESCO.0722.00188	range	#aaaaaa	Original
+ESCO.0722.00189	range	#aaaaaa	Original
+ESCO.0722.00190	range	#aaaaaa	Original
+ESCO.0722.00191	range	#aaaaaa	Original
+ESCO.0722.00192	range	#aaaaaa	Original
+ESCO.0722.00193	range	#aaaaaa	Original
+ESCO.0722.00194	range	#aaaaaa	Original
+ESCO.0722.00195	range	#aaaaaa	Original
+ESCO.0722.00196	range	#aaaaaa	Original
+ESCO.0722.00197	range	#aaaaaa	Original
+ESCO.0722.00198	range	#aaaaaa	Original
+ESCO.0722.00199	range	#aaaaaa	Original
+ESCO.0722.00200	range	#aaaaaa	Original
+ESCO.0722.00201	range	#dddddd	
+ESCO.0722.00202	range	#aaaaaa	Original
+ESCO.0722.00203	range	#aaaaaa	Original
+ESCO.0722.00204	range	#aaaaaa	Original
+ESCO.0722.00205	range	#aaaaaa	Original
+ESCO.0722.00206	range	#aaaaaa	Original
+ESCO.0722.00207	range	#aaaaaa	Original
+ESCO.0722.00208	range	#aaaaaa	Original
+ESCO.0722.00209	range	#aaaaaa	Original
+ESCO.0722.00210	range	#aaaaaa	Original
+ESCO.0722.00211	range	#aaaaaa	Original
+ESCO.0722.00212	range	#aaaaaa	Original
+ESCO.0722.00213	range	#aaaaaa	Original
+ESCO.0722.00214	range	#aaaaaa	Original
+ESCO.0722.00215	range	#dddddd	
+ESCO.0722.00216	range	#aaaaaa	Original
+ESCO.0722.00217	range	#aaaaaa	Original
+ESCO.0722.00218	range	#aaaaaa	Original
+ESCO.0722.00219	range	#dddddd	
+ESCO.0722.00220	range	#aaaaaa	Original
+ESCO.0722.00221	range	#aaaaaa	Original
+ESCO.0722.00222	range	#aaaaaa	Original
+ESCO.0722.00223	range	#aaaaaa	Original
+ESCO.0722.00224	range	#aaaaaa	Original
+ESCO.0722.00225	range	#aaaaaa	Original
+ESCO.0722.00226	range	#aaaaaa	Original
+ESCO.0722.00227	range	#aaaaaa	Original
+ESCO.0722.00228	range	#aaaaaa	Original
+ESCO.0722.00229	range	#aaaaaa	Original
+ESCO.0722.00230	range	#dddddd	
+ESCO.0722.00231	range	#aaaaaa	Original
+ESCO.0722.00232	range	#aaaaaa	Original
+ESCO.0722.00233	range	#aaaaaa	Original
+ESCO.0722.00234	range	#aaaaaa	Original
+ESCO.0722.00235	range	#aaaaaa	Original
+ESCO.0722.00236	range	#aaaaaa	Original
+ESCO.0722.00237	range	#aaaaaa	Original
+ESCO.0722.00238	range	#aaaaaa	Original
+ESCO.0722.00239	range	#aaaaaa	Original
+ESCO.0722.00240	range	#aaaaaa	Original
+ESCO.0722.00241	range	#aaaaaa	Original
+ESCO.0722.00242	range	#aaaaaa	Original
+ESCO.0722.00243	range	#aaaaaa	Original
+ESCO.0722.00244	range	#aaaaaa	Original
+ESCO.0722.00245	range	#aaaaaa	Original
+ESCO.0722.00246	range	#aaaaaa	Original
+ESCO.0722.00247	range	#aaaaaa	Original
+ESCO.0722.00248	range	#aaaaaa	Original
+ESCO.0722.00249	range	#aaaaaa	Original
+ESCO.0722.00250	range	#aaaaaa	Original
+ESCO.0722.00251	range	#aaaaaa	Original
+ESCO.0722.00252	range	#aaaaaa	Original
+ESCO.0722.00253	range	#aaaaaa	Original
+ESCO.0722.00254	range	#aaaaaa	Original
+ESCO.0722.00255	range	#aaaaaa	Original
+ESCO.0722.00256	range	#dddddd	
+ESCO.0722.00257	range	#dddddd	
+ESCO.0722.00258	range	#dddddd	
+ESCO.0722.00259	range	#aaaaaa	Original
+ESCO.0722.00260	range	#aaaaaa	Original
+ESCO.0722.00261	range	#aaaaaa	Original
+ESCO.0722.00262	range	#aaaaaa	Original
+ESCO.0722.00263	range	#aaaaaa	Original
+ESCO.0722.00264	range	#aaaaaa	Original
+ESCO.0722.00265	range	#aaaaaa	Original
+ESCO.0722.00266	range	#aaaaaa	Original
+ESCO.0722.00267	range	#aaaaaa	Original
+ESCO.0722.00268	range	#aaaaaa	Original
+ESCO.0722.00269	range	#dddddd	
+ESCO.0722.00270	range	#dddddd	
+ESCO.0722.00271	range	#aaaaaa	Original
+ESCO.0722.00272	range	#aaaaaa	Original
+ESCO.0722.00273	range	#aaaaaa	Original
+ESCO.0722.00274	range	#aaaaaa	Original
+ESCO.0722.00275	range	#aaaaaa	Original
+ESCO.0722.00276	range	#aaaaaa	Original
+ESCO.0722.00277	range	#dddddd	
+ESCO.0722.00278	range	#aaaaaa	Original
+ESCO.0722.00279	range	#aaaaaa	Original
+ESCO.0722.00280	range	#aaaaaa	Original
+ESCO.0722.00281	range	#aaaaaa	Original
+ESCO.0722.00282	range	#aaaaaa	Original
+ESCO.0722.00283	range	#aaaaaa	Original
+ESCO.0722.00284	range	#aaaaaa	Original
+ESCO.0722.00285	range	#aaaaaa	Original
+ESCO.0722.00286	range	#aaaaaa	Original
+ESCO.0722.00287	range	#aaaaaa	Original
+ESCO.0722.00288	range	#aaaaaa	Original
+ESCO.0722.00289	range	#aaaaaa	Original
+ESCO.0722.00290	range	#aaaaaa	Original
+ESCO.0722.00291	range	#aaaaaa	Original
+ESCO.0722.00292	range	#aaaaaa	Original
+ESCO.0722.00293	range	#aaaaaa	Original
+ESCO.0722.00294	range	#aaaaaa	Original
+ESCO.0722.00295	range	#aaaaaa	Original
+ESCO.0722.00296	range	#aaaaaa	Original
+ESCO.0722.00297	range	#dddddd	
+ESCO.0722.00298	range	#aaaaaa	Original
+ESCO.0722.00299	range	#aaaaaa	Original
+ESCO.0722.00300	range	#aaaaaa	Original
+ESCO.0722.00301	range	#aaaaaa	Original
+ESCO.0722.00302	range	#aaaaaa	Original
+ESCO.0722.00303	range	#aaaaaa	Original
+ESCO.0722.00304	range	#aaaaaa	Original
+ESCO.0722.00305	range	#aaaaaa	Original
+ESCO.0722.00306	range	#dddddd	
+ESCO.0722.00307	range	#aaaaaa	Original
+ESCO.0722.00308	range	#dddddd	
+ESCO.0722.00309	range	#aaaaaa	Original
+ESCO.0722.00310	range	#aaaaaa	Original
+ESCO.0722.00311	range	#aaaaaa	Original
+ESCO.0722.00312	range	#aaaaaa	Original
+ESCO.0722.00313	range	#aaaaaa	Original
+ESCO.0722.00314	range	#aaaaaa	Original
+ESCO.0722.00315	range	#aaaaaa	Original
+ESCO.0722.00316	range	#aaaaaa	Original
+ESCO.0722.00317	range	#aaaaaa	Original
+ESCO.0722.00318	range	#aaaaaa	Original
+ESCO.0722.00319	range	#aaaaaa	Original
+ESCO.0722.00320	range	#aaaaaa	Original
+ESCO.0722.00321	range	#aaaaaa	Original
+ESCO.0722.00322	range	#aaaaaa	Original
+ESCO.0722.00323	range	#dddddd	
+ESCO.0722.00324	range	#aaaaaa	Original
+ESCO.0722.00325	range	#aaaaaa	Original
+ESCO.0722.00326	range	#aaaaaa	Original
+ESCO.0722.00327	range	#aaaaaa	Original
+ESCO.0722.00328	range	#aaaaaa	Original
+ESCO.0722.00329	range	#aaaaaa	Original
+ESCO.0722.00330	range	#aaaaaa	Original
+ESCO.0722.00331	range	#dddddd	
+ESCO.0722.00332	range	#aaaaaa	Original
+ESCO.0722.00333	range	#aaaaaa	Original
+ESCO.0722.00334	range	#aaaaaa	Original
+ESCO.0722.00335	range	#aaaaaa	Original
+ESCO.0722.00336	range	#aaaaaa	Original
+ESCO.0722.00337	range	#aaaaaa	Original
+ESCO.0722.00338	range	#aaaaaa	Original
+ESCO.0722.00339	range	#aaaaaa	Original
+ESCO.0722.00340	range	#aaaaaa	Original
+ESCO.0722.00341	range	#aaaaaa	Original
+ESCO.0722.00342	range	#aaaaaa	Original
+ESCO.0722.00343	range	#dddddd	
+ESCO.0722.00344	range	#aaaaaa	Original
+ESCO.0722.00345	range	#aaaaaa	Original
+ESCO.0722.00346	range	#aaaaaa	Original
+ESCO.0722.00347	range	#aaaaaa	Original
+ESCO.0722.00348	range	#dddddd	
+ESCO.0722.00349	range	#aaaaaa	Original
+ESCO.0722.00350	range	#aaaaaa	Original
+ESCO.0722.00351	range	#aaaaaa	Original
+ESCO.0722.00352	range	#dddddd	
+ESCO.0722.00353	range	#aaaaaa	Original
+ESCO.0722.00354	range	#aaaaaa	Original
+ESCO.0722.00355	range	#aaaaaa	Original
+ESCO.0722.00356	range	#aaaaaa	Original
+ESCO.0722.00357	range	#dddddd	
+ESCO.0722.00358	range	#aaaaaa	Original
+ESCO.0722.00359	range	#dddddd	
+ESCO.0722.00360	range	#aaaaaa	Original
+ESCO.0722.00361	range	#aaaaaa	Original
+ESCO.0722.00362	range	#aaaaaa	Original
+ESCO.0722.00363	range	#aaaaaa	Original
+ESCO.0722.00364	range	#aaaaaa	Original
+ESCO.0722.00365	range	#aaaaaa	Original
+ESCO.0722.00366	range	#aaaaaa	Original
+ESCO.0722.00367	range	#aaaaaa	Original
+ESCO.0722.00368	range	#aaaaaa	Original
+ESCO.0722.00369	range	#aaaaaa	Original
+ESCO.0722.00370	range	#aaaaaa	Original
+ESCO.0722.00371	range	#aaaaaa	Original
+ESCO.0722.00372	range	#aaaaaa	Original
+ESCO.0722.00373	range	#aaaaaa	Original
+ESCO.0722.00374	range	#aaaaaa	Original
+ESCO.0722.00375	range	#dddddd	
+ESCO.0722.00376	range	#aaaaaa	Original
+ESCO.0722.00377	range	#aaaaaa	Original
+ESCO.0722.00378	range	#aaaaaa	Original
+ESCO.0722.00379	range	#dddddd	
+ESCO.0722.00380	range	#aaaaaa	Original
+ESCO.0722.00381	range	#aaaaaa	Original
+ESCO.0722.00382	range	#aaaaaa	Original
+ESCO.0722.00383	range	#dddddd	
+ESCO.0722.00384	range	#aaaaaa	Original
+ESCO.0722.00385	range	#aaaaaa	Original
+ESCO.0722.00386	range	#aaaaaa	Original
+ESCO.0722.00387	range	#aaaaaa	Original
+ESCO.0722.00388	range	#aaaaaa	Original
+ESCO.0722.00389	range	#aaaaaa	Original
+ESCO.0722.00390	range	#aaaaaa	Original
+ESCO.0722.00391	range	#aaaaaa	Original
+ESCO.0722.00392	range	#aaaaaa	Original
+ESCO.0722.00393	range	#aaaaaa	Original
+ESCO.0722.00394	range	#aaaaaa	Original
+ESCO.0722.00395	range	#aaaaaa	Original
+ESCO.0722.00396	range	#aaaaaa	Original
+ESCO.0722.00397	range	#aaaaaa	Original
+ESCO.0722.00398	range	#aaaaaa	Original
+ESCO.0722.00399	range	#aaaaaa	Original
+ESCO.0722.00400	range	#aaaaaa	Original
+ESCO.0722.00401	range	#aaaaaa	Original
+ESCO.0722.00402	range	#aaaaaa	Original
+ESCO.0722.00403	range	#aaaaaa	Original
+ESCO.0722.00404	range	#aaaaaa	Original

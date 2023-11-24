@@ -1,0 +1,19 @@
+<model inter_gene_max_space="5" min_mandatory_genes_required="3" min_genes_required="5" vers="2.0">
+<gene name="KfoF" presence="mandatory"/>
+<gene name="KfoA" presence="mandatory"/>
+<gene name="KfoG" presence="mandatory"/>
+<gene name="KfoC" presence="mandatory"/>
+<gene name="KfoE" presence="mandatory"/>
+<gene name="cluster_87" presence="mandatory"/>
+<gene name="cluster_79" presence="mandatory"/>
+<gene name="KfoD" presence="mandatory"/>
+<gene name="KfoB" presence="mandatory"/>
+<gene name="KpsE" presence="accessory"/>
+<gene name="KpsD" presence="accessory"/>
+<gene name="KpsU" presence="accessory"/>
+<gene name="KpsT" presence="accessory"/>
+<gene name="KpsS" presence="accessory"/>
+<gene name="KpsC" presence="accessory"/>
+<gene name="KpsM" presence="accessory"/>
+<gene name="KpsF" presence="accessory"/>
+</model>

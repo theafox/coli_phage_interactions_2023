@@ -1,0 +1,33 @@
+ESCO.0722.00035	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00035.fna_mash_screen.tab
+ESCO.0722.00043	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00043.fna_mash_screen.tab
+ESCO.0722.00053	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00053.fna_mash_screen.tab
+ESCO.0722.00085	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00085.fna_mash_screen.tab
+ESCO.0722.00129	['trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00129.fna_mash_screen.tab
+ESCO.0722.00140	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00140.fna_mash_screen.tab
+ESCO.0722.00142	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00142.fna_mash_screen.tab
+ESCO.0722.00149	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00149.fna_mash_screen.tab
+ESCO.0722.00151	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00151.fna_mash_screen.tab
+ESCO.0722.00166	['ybgD', 'trpA', 'trpBA', 'chuA', 'trpAgpC']	['-', '+', '-', '-']	['trpAgpC', 'ybgD']	G	ESCO.0722.00166.fna_mash_screen.tab
+ESCO.0722.00169	['cfaB', 'trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC', 'cfaB']	B2	ESCO.0722.00169.fna_mash_screen.tab
+ESCO.0722.00170	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2']	['-', '+', '+', '+']	[]	B2	ESCO.0722.00170.fna_mash_screen.tab
+ESCO.0722.00201	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00201.fna_mash_screen.tab
+ESCO.0722.00215	['ybgD', 'trpA', 'trpBA', 'TspE4.C2', 'arpA', 'fdm', 'trpAgpC']	['+', '-', '-', '+']	['fdm', 'trpAgpC', 'ybgD']	B1	ESCO.0722.00215.fna_mash_screen.tab
+ESCO.0722.00230	['ybgD', 'trpA', 'trpBA', 'chuA', 'arpA', 'trpAgpC']	['+', '+', '-', '-']	['trpAgpC', 'ybgD']	D	ESCO.0722.00230.fna_mash_screen.tab
+ESCO.0722.00256	['trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00256.fna_mash_screen.tab
+ESCO.0722.00257	['ybgD', 'trpA', 'trpBA', 'chuA', 'arpA', 'trpAgpC']	['+', '+', '-', '-']	['trpAgpC', 'ybgD']	D	ESCO.0722.00257.fna_mash_screen.tab
+ESCO.0722.00258	['ybgD', 'trpA', 'trpBA', 'chuA', 'arpA', 'trpAgpC']	['+', '+', '-', '-']	['trpAgpC', 'ybgD']	D	ESCO.0722.00258.fna_mash_screen.tab
+ESCO.0722.00269	['ybgD', 'trpA', 'trpBA', 'chuA', 'arpA', 'trpAgpC']	['+', '+', '-', '-']	['trpAgpC', 'ybgD']	D	ESCO.0722.00269.fna_mash_screen.tab
+ESCO.0722.00270	['ybgD', 'trpA', 'trpBA', 'yjaA', 'arpA', 'fdm', 'trpAgpC']	['+', '-', '+', '-']	['fdm', 'trpAgpC', 'ybgD']	C	ESCO.0722.00270.fna_mash_screen.tab
+ESCO.0722.00277	['trpA', 'trpBA', 'yjaA', 'arpA', 'fdm']	['+', '-', '+', '-']	['fdm']	A	ESCO.0722.00277.fna_mash_screen.tab
+ESCO.0722.00297	['ybgD', 'trpA', 'trpBA', 'yjaA', 'arpA', 'fdm', 'trpAgpC']	['+', '-', '+', '-']	['fdm', 'trpAgpC', 'ybgD']	C	ESCO.0722.00297.fna_mash_screen.tab
+ESCO.0722.00306	['ybgD', 'trpA', 'trpBA', 'TspE4.C2', 'arpA', 'fdm', 'trpAgpC']	['+', '-', '-', '+']	['fdm', 'trpAgpC', 'ybgD']	B1	ESCO.0722.00306.fna_mash_screen.tab
+ESCO.0722.00308	['trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC']	B2	ESCO.0722.00308.fna_mash_screen.tab
+ESCO.0722.00323	['trpA', 'trpBA', 'yjaA', 'arpA', 'fdm']	['+', '-', '+', '-']	['fdm']	A	ESCO.0722.00323.fna_mash_screen.tab
+ESCO.0722.00331	['ybgD', 'trpA', 'trpBA', 'arpA', 'fdm']	['+', '-', '-', '-']	['fdm', 'ybgD']	A	ESCO.0722.00331.fna_mash_screen.tab
+ESCO.0722.00343	['ybgD', 'trpA', 'trpBA', 'chuA', 'arpA', 'trpAgpC']	['+', '+', '-', '-']	['trpAgpC', 'ybgD']	D	ESCO.0722.00343.fna_mash_screen.tab
+ESCO.0722.00348	['ybgD', 'trpA', 'trpBA', 'TspE4.C2', 'arpA', 'fdm', 'trpAgpC']	['+', '-', '-', '+']	['fdm', 'trpAgpC', 'ybgD']	B1	ESCO.0722.00348.fna_mash_screen.tab
+ESCO.0722.00352	['ybgD', 'trpA', 'trpBA', 'TspE4.C2', 'arpA', 'fdm']	['+', '-', '-', '+']	['fdm', 'ybgD']	B1	ESCO.0722.00352.fna_mash_screen.tab
+ESCO.0722.00357	['trpA', 'trpBA', 'yjaA', 'arpA', 'fdm']	['+', '-', '+', '-']	['fdm']	A	ESCO.0722.00357.fna_mash_screen.tab
+ESCO.0722.00359	['ybgD', 'trpA', 'trpBA', 'chuA', 'yjaA', 'TspE4.C2', 'trpAgpC']	['-', '+', '+', '+']	['trpAgpC', 'ybgD']	B2	ESCO.0722.00359.fna_mash_screen.tab
+ESCO.0722.00375	['trpA', 'trpBA', 'yjaA', 'arpA', 'fdm']	['+', '-', '+', '-']	['fdm']	A	ESCO.0722.00375.fna_mash_screen.tab
+ESCO.0722.00379	['ybgD', 'trpA', 'trpBA', 'chuA', 'arpA', 'trpAgpC']	['+', '+', '-', '-']	['trpAgpC', 'ybgD']	D	ESCO.0722.00379.fna_mash_screen.tab

@@ -1,0 +1,17 @@
+<model inter_gene_max_space="5" min_mandatory_genes_required="3" min_genes_required="5" vers="2.0">
+<gene name="KfoF" presence="accessory"/>
+<gene name="KpsC_2" presence="accessory"/>
+<gene name="WckF" presence="accessory"/>
+<gene name="KpsT_2" presence="accessory"/>
+<gene name="KpsE_2" presence="accessory"/>
+<gene name="KpsM_2" presence="accessory"/>
+<gene name="RmlB" presence="accessory"/>
+<gene name="RmlD" presence="accessory"/>
+<gene name="RmlC" presence="accessory"/>
+<gene name="WckE" presence="accessory"/>
+<gene name="RmlA" presence="accessory"/>
+<gene name="WckH" presence="mandatory"/>
+<gene name="WckI" presence="mandatory"/>
+<gene name="WckF" presence="mandatory"/>
+<gene name="WckG" presence="mandatory"/>
+</model>
