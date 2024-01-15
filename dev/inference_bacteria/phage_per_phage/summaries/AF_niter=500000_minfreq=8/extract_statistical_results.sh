@@ -1,0 +1,1 @@
+for f in $(ls); do cat ${f} | grep -A 200 "(Intercept)" | grep -v "\[1\]" | sed 's/---//g' | sed 's/\[ reached .*//g' | sed 's/<//g' | sed 's/Signif.*//g' | tr -s " " | sed 's/ /\t/g' | sed "s/\*//g" | sed 's/\t\.//g' | sed 's/\t\n/\n/g' | sed 's/\t\t/\t/g' | sed 's/\t\n//g' | sed 's/\n\t\n//g' > ../prepro/${f%.res}.tsv ; done
