@@ -11,7 +11,7 @@ import pickle
 
 import sklearn
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, OneHotEncoder
-from sklearn.model_selection import GroupKFold, LeaveOneGroupOut, train_test_split, cross_val_predict
+from sklearn.model_selection import GroupKFold, LeaveOneGroupOut, StratifiedKFold, train_test_split, cross_val_predict
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.neural_network import MLPClassifier
@@ -45,7 +45,6 @@ interaction_matrix = interaction_matrix.replace({"N": 0, "P": 1, "F": np.nan, "U
 phage_feat_names = ["Morphotype", "Genus", "Phage_host"]
 print(f"Phage features : {phage_feat_names}")
 
-cv_clusters = pd.read_csv("D:\\These\\30_dev\\302_HR_predictions\\370+host_cross_validation_groups_1e-4.csv", sep=";").set_index("bacteria")
 phage_features = (pd.read_csv("../../data/genomics/phages/guelin_collection.csv", sep=";").set_index("phage").loc[interaction_matrix.columns, phage_feat_names])
 bact_features = pd.read_csv("../../data/genomics/bacteria/picard_collection.csv", sep=";").set_index("bacteria")
 
@@ -69,8 +68,6 @@ for p in phage_features.index:
     interaction_matrix_long = interaction_mat.unstack().reset_index().rename({"level_0": "phage", 0: "y"}, axis=1).sort_values(["bacteria", "phage"])  # force row order
 
     # Add the cross-validation index of each observation for Leave-one-strain-out CV
-    interaction_matrix_long = pd.merge(interaction_matrix_long, cv_clusters, left_on=["bacteria"], right_index=True).set_index("group")
-    groups = interaction_matrix_long.index
 
     # Concat features and target
     interaction_with_features = pd.merge(interaction_matrix_long, bact_features, left_on=["bacteria"], right_index=True)
@@ -142,13 +139,10 @@ for p in phage_features.index:
 
     from sklearn.exceptions import NotFittedError
 
-    def perform_group_cross_validation(X, y, models, models_params, n_splits=10, groups=None, index_names=None, do_scale=False):
-        group_kfold = GroupKFold(n_splits=n_splits)
+    def perform_group_cross_validation(X, y, models, models_params, n_splits=10, index_names=None, do_scale=False):
+        group_kfold = StratifiedKFold(n_splits=n_splits)
         umap_dim = X.shape[1] // 2
 
-        if groups is None:
-            raise ValueError("Should provide grouping variable in order to perform Group-K-fold CV.")
-        
         # Train feature scaler on the whole dataset (if required)
         if do_scale:
             std_scaler = MinMaxScaler()
@@ -156,9 +150,8 @@ for p in phage_features.index:
 
         performance, predictions, logs = [], [], []
         model_list = {}
-        for i, (train_idx, test_idx) in enumerate(group_kfold.split(X, y, groups)):  # K-fold cross-validation
+        for i, (train_idx, test_idx) in enumerate(group_kfold.split(X, y)):  # K-fold cross-validation
             X_train, X_test, y_train, y_test = X.iloc[train_idx], X.iloc[test_idx], y.iloc[train_idx], y.iloc[test_idx]
-            chosen_groups = groups[test_idx].unique().values
 
             # check that train set observations and validation set observations are disjoint
             assert(set(X_train.index).intersection(set(X_test.index)) == set())
@@ -209,7 +202,7 @@ for p in phage_features.index:
 
                 model_list[f"{p}_{alias}_fold={i}"] = model
                 del model
-            logs.append({"fold": i, "train_size": train_idx.shape[0], "test_size": test_idx.shape[0], "train_idx": train_idx, "test_idx": test_idx, "cv_groups": chosen_groups})
+            logs.append({"fold": i, "train_size": train_idx.shape[0], "test_size": test_idx.shape[0], "train_idx": train_idx, "test_idx": test_idx})
 
         logs = pd.DataFrame(logs)
         performance = pd.DataFrame(performance)
@@ -252,7 +245,7 @@ for p in phage_features.index:
                     {"class_weight": cw, "penalty": "l1", "solver": "saga", "max_iter": 10000},
                     {"strategy":"stratified"}
                 ]
-        logs, performance, cv_predictions, trained_models = perform_group_cross_validation(X_oh, y, n_splits=n_splits, groups=interaction_with_features.index, 
+        logs, performance, cv_predictions, trained_models = perform_group_cross_validation(X_oh, y, n_splits=n_splits,
                                                                                         index_names=bact_phage_names, 
                                                                                         models=models_to_test, models_params=params, do_scale=False)
         
