@@ -22,22 +22,22 @@ from sklearn.metrics import precision_recall_curve, precision_score, recall_scor
 
 np.random.seed(0)
 
-save_dir = "D:\\These\\30_dev\\302_HR_predictions\\+++\\stratified_all_phages\\adsorption_factors+core_genome_1e-4_quat"
-if not os.path.isdir(save_dir + "\\results"):
-    os.mkdir(save_dir + "\\results")
-if not os.path.isdir(save_dir + "\\results\\models"):
-    os.mkdir(save_dir + "\\" + "results\\models")
-if not os.path.isdir(save_dir + "\\results\\feature_importances"):
-    os.mkdir(save_dir + "\\" + "results\\feature_importances")
-if not os.path.isdir(save_dir + "\\results\\logs"):
-    os.mkdir(save_dir + "\\" + "results\\logs")
-if not os.path.isdir(save_dir + "\\results\\performances"):
-    os.mkdir(save_dir + "\\" + "results\\performances")
-if not os.path.isdir(save_dir + "\\results\\predictions"):
-    os.mkdir(save_dir + "\\" + "results\\predictions")
+save_dir = "outputs"
+if not os.path.isdir(save_dir + "/results"):
+    os.mkdir(save_dir + "/results")
+if not os.path.isdir(save_dir + "/results/models"):
+    os.mkdir(save_dir + "/" + "results/models")
+if not os.path.isdir(save_dir + "/results/feature_importances"):
+    os.mkdir(save_dir + "/" + "results/feature_importances")
+if not os.path.isdir(save_dir + "/results/logs"):
+    os.mkdir(save_dir + "/" + "results/logs")
+if not os.path.isdir(save_dir + "/results/performances"):
+    os.mkdir(save_dir + "/" + "results/performances")
+if not os.path.isdir(save_dir + "/results/predictions"):
+    os.mkdir(save_dir + "/" + "results/predictions")
 
 # Load data
-interaction_matrix = pd.read_csv("D:\\These\\20_data\\212_interaction_matrices\\ADSORPTION_MATRIX_370+host_vs_96_less_stringent.csv", sep=";").set_index("bacteria")
+interaction_matrix = pd.read_csv("../../data/interactions/interaction_matrix.csv", sep=";").set_index("bacteria")
 interaction_matrix = interaction_matrix.replace({"N": 0, "P": 1, "F": np.nan, "U": 1})
 
 # interaction_matrix = interaction_matrix.loc[interaction_matrix.count(axis=1)[interaction_matrix.count(axis=1) > 70].index].fillna(0)
@@ -45,11 +45,11 @@ interaction_matrix = interaction_matrix.replace({"N": 0, "P": 1, "F": np.nan, "U
 phage_feat_names = ["Morphotype", "Genus", "Phage_host"]
 print(f"Phage features : {phage_feat_names}")
 
-phage_features = pd.read_csv("D:\These\\20_data\\201_genomic_data\\097_phage\\Phage_features_with_host.csv", sep=";").set_index("phage").loc[interaction_matrix.columns, phage_feat_names]
-bact_features = pd.read_csv("D:\These\\20_data\\201_genomic_data\\370_and_host\\370+host_features_with_ABC_capsules_2.csv", sep=";").set_index("bacteria")
 cv_clusters = pd.read_csv("D:\\These\\30_dev\\302_HR_predictions\\370+host_cross_validation_groups_1e-4.csv", sep=";").set_index("bacteria")
+phage_features = (pd.read_csv("../../data/genomics/phages/guelin_collection.csv", sep=";").set_index("phage").loc[interaction_matrix.columns, phage_feat_names])
+bact_features = pd.read_csv("../../data/genomics/bacteria/picard_collection.csv", sep=";").set_index("bacteria")
 
-bact_embeddings = pd.read_csv("D:\\These\\30_dev\\302_HR_predictions\\core_genome\\UMAP_dim_reduction_from_phylogeny\\data\\coli_umap_8_dims.tsv", sep="\t").set_index("bacteria")
+bact_embeddings = pd.read_csv("../../data/genomics/bacteria/umap_phylogeny/coli_umap_8_dims.tsv", sep="\t").set_index("bacteria")
 
 bact_features = pd.merge(bact_features, bact_embeddings, left_index=True, right_index=True)
 
@@ -266,16 +266,16 @@ for p in phage_features.index:
 
         overwrite_files = True  # overwrite log and performance files
         if overwrite_files:
-            logs.to_csv(f"{save_dir}\\results\\logs\\logs_{p}_Group{n_splits}Fold_CV.csv", sep=";", index=False)
-            performance.to_csv(f"{save_dir}\\results\\performances\\performance_{p}_Group{n_splits}Fold_CV.csv", sep=";",)
-            cv_predictions.to_csv(f"{save_dir}\\results\\predictions\\predictions_{p}_core_features_Group{n_splits}Fold_CV.csv", sep=";", index=False)
+            logs.to_csv(f"{save_dir}/results/logs/logs_{p}_Group{n_splits}Fold_CV.csv", sep=";", index=False)
+            performance.to_csv(f"{save_dir}/results/performances/performance_{p}_Group{n_splits}Fold_CV.csv", sep=";",)
+            cv_predictions.to_csv(f"{save_dir}/results/predictions/predictions_{p}_core_features_Group{n_splits}Fold_CV.csv", sep=";", index=False)
 
-            if not os.path.isdir(f"{save_dir}\\results\\models\\{p}"):
-                os.mkdir(f"{save_dir}\\results\\models\\{p}")
+            if not os.path.isdir(f"{save_dir}/results/models/{p}"):
+                os.mkdir(f"{save_dir}/results/models/{p}")
 
             for k, mod in enumerate(trained_models):
                 save_name = str(k) + "_" + mod.split("_")[0] + "_" + mod.split("_")[1] + "_" + mod.split("_")[-1]
-                with open(f"{save_dir}\\results\\models\\{p}\\{mod}.pickle", "wb") as save_file:
+                with open(f"{save_dir}/results/models/{p}/{mod}.pickle", "wb") as save_file:
                     pickle.dump(trained_models[mod], save_file)
 
             # print("Saved performances, predictions, log files and models !")
@@ -291,9 +291,9 @@ for p in phage_features.index:
         print(f"Best model: {model_name}")
 
         clfs = []
-        for mod in os.listdir(save_dir + f"\\results\\models\\{p}"):
+        for mod in os.listdir(save_dir + f"/results/models/{p}"):
             if mod.startswith(p + "_" + model_name) and mod.endswith("pickle"):
-                clfs.append(pickle.load(open(save_dir +  f"\\results\\models\\{p}\\" + mod, "rb")))
+                clfs.append(pickle.load(open(save_dir + f"/results/models/{p}/" + mod, "rb")))
 
         # save feature importance
         if model_name.startswith("RF"):
